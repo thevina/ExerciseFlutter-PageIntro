@@ -25,4 +25,13 @@
   ],
   "commands": {
     "open-app": {
-   
+      "suggested_key": {
+        "default": "Ctrl+J",
+        "windows": "Ctrl+J",
+        "linux": "Ctrl+J",
+        "mac": "Command+J"
+      },
+      "description": "Open ChatHub app"
+    }
+  }
+}
