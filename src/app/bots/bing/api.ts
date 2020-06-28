@@ -12,3 +12,13 @@ export async function createConversation(): Promise<ConversationResponse> {
   })
   if (resp.result.value !== 'Success') {
     const message = `${resp.result.value}: ${resp.result.message}`
+    if (resp.result.value === 'UnauthorizedRequest') {
+      throw new ChatError(message, ErrorCode.BING_UNAUTHORIZED)
+    }
+    if (resp.result.value === 'Forbidden') {
+      throw new ChatError(message, ErrorCode.BING_FORBIDDEN)
+    }
+    throw new Error(message)
+  }
+  return resp
+}
