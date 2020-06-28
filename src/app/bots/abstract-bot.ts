@@ -37,4 +37,5 @@ export abstract class AbstractBot {
   }
 
   abstract doSendMessage(params: SendMessageParams): Promise<void>
-  abstract resetC
+  abstract resetConversation(): void
+}
