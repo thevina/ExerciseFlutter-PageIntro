@@ -24,4 +24,27 @@ export class ChatGPTApiBot extends AbstractBot {
     }
     this.conversationContext.messages.push({ role: 'user', content: params.prompt })
 
-    const resp = await f
+    const resp = await fetch(`${openaiApiHost}/v1/chat/completions`, {
+      method: 'POST',
+      signal: params.signal,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${openaiApiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo',
+        messages: this.conversationContext.messages,
+        temperature: 0.6,
+        stream: true,
+      }),
+    })
+
+    const result: ChatMessage = { role: 'assistant', content: '' }
+
+    await parseSSEResponse(resp, (message) => {
+      console.debug('chatgpt sse message', message)
+      if (message === '[DONE]') {
+        params.onEvent({ type: 'DONE' })
+        const messages = this.conversationContext!.messages
+        messages.push(result)
+   
