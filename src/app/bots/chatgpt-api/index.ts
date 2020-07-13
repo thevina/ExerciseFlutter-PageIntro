@@ -47,4 +47,30 @@ export class ChatGPTApiBot extends AbstractBot {
         params.onEvent({ type: 'DONE' })
         const messages = this.conversationContext!.messages
         messages.push(result)
-   
+        updateTokenUsage(messages).catch(console.error)
+        return
+      }
+      let data
+      try {
+        data = JSON.parse(message)
+      } catch (err) {
+        console.error(err)
+        return
+      }
+      if (data?.choices?.length) {
+        const delta = data.choices[0].delta
+        if (delta?.content) {
+          result.content += delta.content
+          params.onEvent({
+            type: 'UPDATE_ANSWER',
+            data: { text: result.content },
+          })
+        }
+      }
+    })
+  }
+
+  resetConversation() {
+    this.conversationContext = undefined
+  }
+}
