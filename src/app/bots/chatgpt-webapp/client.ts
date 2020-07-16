@@ -43,3 +43,24 @@ class ChatGPTClient {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
+      body: data === undefined ? undefined : JSON.stringify(data),
+    })
+  }
+
+  async getModels(token: string): Promise<{ slug: string; title: string; description: string; max_tokens: number }[]> {
+    const resp = await this.requestBackendAPIWithToken(token, 'GET', '/models').then((r) => r.json())
+    return resp.models
+  }
+
+  // Switch to proxy mode, or refresh the proxy tab
+  async fixAuthState() {
+    if (this.requester === proxyFetchRequester) {
+      await proxyFetchRequester.refreshProxyTab()
+    } else {
+      await proxyFetchRequester.getProxyTab()
+      this.switchRequester(proxyFetchRequester)
+    }
+  }
+}
+
+export const chatGPTClient = new ChatGPTClient()
