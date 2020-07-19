@@ -25,4 +25,12 @@ const Button: FC<Props> = (props) => {
       onClick={props.onClick}
     >
       {props.isLoading ? (
-        <BeatLoader size={size ==
+        <BeatLoader size={size === 'normal' ? 10 : 5} color={props.color === 'primary' ? 'white' : '#303030'} />
+      ) : (
+        props.text
+      )}
+    </button>
+  )
+}
+
+export default Button
