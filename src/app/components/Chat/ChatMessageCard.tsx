@@ -49,4 +49,14 @@ const ChatMessageCard: FC<Props> = ({ message, className }) => {
       {!!copyText && (
         <CopyToClipboard text={copyText} onCopy={() => setCopied(true)}>
           {copied ? (
-            <IoCopy className="self-center cursor-pointer invisible group-hover:visible" color="#707
+            <IoCopy className="self-center cursor-pointer invisible group-hover:visible" color="#707070" />
+          ) : (
+            <IoCopyOutline className="self-center cursor-pointer invisible group-hover:visible" />
+          )}
+        </CopyToClipboard>
+      )}
+    </div>
+  )
+}
+
+export default memo(ChatMessageCard)
