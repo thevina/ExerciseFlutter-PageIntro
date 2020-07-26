@@ -36,4 +36,17 @@ const ChatMessageCard: FC<Props> = ({ message, className }) => {
       className={cx('group flex gap-3 w-full', message.author === 'user' ? 'flex-row-reverse' : 'flex-row', className)}
     >
       <div className="flex flex-col w-11/12  max-w-fit items-start gap-2">
-        <MessageBub
+        <MessageBubble color={message.author === 'user' ? 'primary' : 'flat'}>
+          {message.text ? (
+            <Markdown>{message.text}</Markdown>
+          ) : (
+            !message.error && <BeatLoader size={10} className="leading-tight" />
+          )}
+          {!!message.error && <p className="text-[#e00]">{message.error.message}</p>}
+        </MessageBubble>
+        {!!message.error && <ErrorAction error={message.error} />}
+      </div>
+      {!!copyText && (
+        <CopyToClipboard text={copyText} onCopy={() => setCopied(true)}>
+          {copied ? (
+            <IoCopy className="self-center cursor-pointer invisible group-hover:visible" color="#707
