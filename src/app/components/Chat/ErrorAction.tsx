@@ -26,3 +26,21 @@ const ChatGPTAuthErrorAction = () => {
   if (fixed) {
     return <MessageBubble color="flat">Fixed, please retry chat</MessageBubble>
   }
+  return (
+    <div className="flex flex-row gap-2 items-center">
+      <Button color="primary" text="Login & verify" onClick={fixChatGPT} isLoading={fixing} size="small" />
+      <span className="text-sm">OR</span>
+      <Link to="/setting">
+        <Button color="primary" text="Set api key" size="small" />
+      </Link>
+    </div>
+  )
+}
+
+const ErrorAction: FC<{ error: ChatError }> = ({ error }) => {
+  const conversation = useContext(ConversationContext)
+
+  if (error.code === ErrorCode.BING_UNAUTHORIZED) {
+    return (
+      <a href="https://bing.com" target="_blank" rel="noreferrer">
+        <Button color="primary" text="Login at bin
