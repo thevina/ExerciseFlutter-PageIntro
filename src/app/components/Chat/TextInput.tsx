@@ -36,4 +36,13 @@ const TextInput = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
       value={value}
       onChange={(event) => onValueChange(event.target.value)}
       autoComplete="off"
-      mi
+      minRows={minRows}
+      maxRows={5}
+      {...textareaProps}
+    />
+  )
+})
+
+TextInput.displayName = 'TextInput'
+
+export default TextInput
