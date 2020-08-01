@@ -63,4 +63,4 @@ const ErrorAction: FC<{ error: ChatError }> = ({ error }) => {
   return null
 }
 
-export de
+export default ErrorAction
