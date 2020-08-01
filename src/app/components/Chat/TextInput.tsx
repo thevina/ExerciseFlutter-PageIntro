@@ -12,4 +12,28 @@ const TextInput = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
 
   const onKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = useCallback(
     (e) => {
-      if (e.keyCode 
+      if (e.keyCode === 13) {
+        e.preventDefault()
+        if (e.shiftKey) {
+          onValueChange(value + '\n')
+        } else if (!disabled) {
+          formref?.current?.requestSubmit()
+        }
+      }
+    },
+    [disabled, formref, onValueChange, value],
+  )
+
+  return (
+    <TextareaAutosize
+      ref={ref}
+      className={cx(
+        'resize-none overflow-hidden w-full outline-none text-sm text-[#303030] bg-white',
+        disabled && 'cursor-wait',
+        className,
+      )}
+      onKeyDown={onKeyDown}
+      value={value}
+      onChange={(event) => onValueChange(event.target.value)}
+      autoComplete="off"
+      mi
