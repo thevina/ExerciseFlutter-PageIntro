@@ -40,4 +40,18 @@ function Select<T extends string>(props: Props<T>) {
                         'relative cursor-default select-none py-2 pl-3 pr-9',
                       )
                     }
-                    val
+                    value={option.value}
+                  >
+                    {({ selected, active }) => (
+                      <>
+                        <span className={cx(selected ? 'font-semibold' : 'font-normal', 'block truncate')}>
+                          {option.name}
+                        </span>
+                        {selected ? (
+                          <span
+                            className={cx(
+                              active ? 'text-white' : 'text-[#6756BD]',
+                              'absolute inset-y-0 right-0 flex items-center pr-4',
+                            )}
+                          >
+                            <Check
