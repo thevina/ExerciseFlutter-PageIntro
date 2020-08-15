@@ -54,4 +54,20 @@ function Select<T extends string>(props: Props<T>) {
                               'absolute inset-y-0 right-0 flex items-center pr-4',
                             )}
                           >
-                            <Check
+                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                        ) : null}
+                      </>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </Transition>
+          </div>
+        </>
+      )}
+    </Listbox>
+  )
+}
+
+export default Select
