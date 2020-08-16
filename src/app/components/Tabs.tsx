@@ -37,4 +37,9 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content className={cx('mt-2 outline-none', className)} {...props} ref={ref} />
+))
+TabsContent.displayName = TabsPrimitive.Content.displayName
+
+export { Tabs, TabsList, TabsTrigger, TabsContent }
