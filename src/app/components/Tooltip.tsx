@@ -15,4 +15,9 @@ const Tooltip: FC<PropsWithChildren<{ content: string }>> = (props) => {
             <ReactTooltip.Arrow className="fill-white" />
           </ReactTooltip.Content>
         </ReactTooltip.Portal>
-     
+      </ReactTooltip.Root>
+    </ReactTooltip.Provider>
+  )
+}
+
+export default Tooltip
