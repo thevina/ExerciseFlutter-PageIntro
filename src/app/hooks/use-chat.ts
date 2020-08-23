@@ -40,4 +40,22 @@ export function useChat(botId: BotId, page = 'singleton') {
         signal: abortController.signal,
         onEvent(event) {
           if (event.type === 'UPDATE_ANSWER') {
-            updateMessage(botMessageId
+            updateMessage(botMessageId, (message) => {
+              message.text = event.data.text
+            })
+          } else if (event.type === 'ERROR') {
+            console.error('sendMessage error', event.error.code, event.error)
+            updateMessage(botMessageId, (message) => {
+              message.error = event.error
+            })
+            setChatState((draft) => {
+              draft.abortController = undefined
+              draft.generatingMessageId = ''
+            })
+          } else if (event.type === 'DONE') {
+            setChatState((draft) => {
+              draft.abortController = undefined
+              draft.generatingMessageId = ''
+            })
+          }
+     
