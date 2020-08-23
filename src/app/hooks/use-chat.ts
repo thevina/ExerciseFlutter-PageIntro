@@ -21,4 +21,23 @@ export function useChat(botId: BotId, page = 'singleton') {
     [setChatState],
   )
 
-  const sendMessage = us
+  const sendMessage = useCallback(
+    async (input: string) => {
+      const botMessageId = uuid()
+      setChatState((draft) => {
+        draft.messages.push(
+          { id: uuid(), text: input.replaceAll('\n', '\n\n'), author: 'user' },
+          { id: botMessageId, text: '', author: botId },
+        )
+      })
+      const abortController = new AbortController()
+      setChatState((draft) => {
+        draft.generatingMessageId = botMessageId
+        draft.abortController = abortController
+      })
+      await chatState.bot.sendMessage({
+        prompt: input,
+        signal: abortController.signal,
+        onEvent(event) {
+          if (event.type === 'UPDATE_ANSWER') {
+            updateMessage(botMessageId
