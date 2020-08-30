@@ -58,4 +58,28 @@ export function useChat(botId: BotId, page = 'singleton') {
               draft.generatingMessageId = ''
             })
           }
-     
+        },
+      })
+    },
+    [botId, chatState.bot, setChatState, updateMessage],
+  )
+
+  const resetConversation = useCallback(() => {
+    chatState.bot.resetConversation()
+    setChatState((draft) => {
+      draft.abortController = undefined
+      draft.generatingMessageId = ''
+      draft.messages = []
+    })
+  }, [chatState.bot, setChatState])
+
+  const stopGenerating = useCallback(() => {
+    chatState.abortController?.abort()
+    if (chatState.generatingMessageId) {
+      updateMessage(chatState.generatingMessageId, (message) => {
+        if (!message.text && !message.error) {
+          message.text = 'Cancelled'
+        }
+      })
+    }
+   
