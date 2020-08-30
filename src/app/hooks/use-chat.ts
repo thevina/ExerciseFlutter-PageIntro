@@ -82,4 +82,16 @@ export function useChat(botId: BotId, page = 'singleton') {
         }
       })
     }
-   
+    setChatState((draft) => {
+      draft.generatingMessageId = ''
+    })
+  }, [chatState.abortController, chatState.generatingMessageId, setChatState, updateMessage])
+
+  return {
+    messages: chatState.messages,
+    sendMessage,
+    resetConversation,
+    generating: !!chatState.generatingMessageId,
+    stopGenerating,
+  }
+}
