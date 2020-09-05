@@ -48,4 +48,19 @@ const MultiBotChatPanel: FC = () => {
         mode="compact"
         resetConversation={bingChat.resetConversation}
       />
-      <div classN
+      <div className="col-span-full">
+        <ChatMessageInput
+          mode="full"
+          className="rounded-full bg-white px-[20px] py-[10px]"
+          disabled={generating}
+          placeholder="Send to all ..."
+          onSubmit={onUserSendMessage}
+          actionButton={!generating && <Button text="Send" color="primary" type="submit" />}
+          autoFocus={true}
+        />
+      </div>
+    </div>
+  )
+}
+
+export default MultiBotChatPanel
