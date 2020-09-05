@@ -29,4 +29,23 @@ const MultiBotChatPanel: FC = () => {
   )
 
   return (
-    <div className="grid grid-cols-2 grid-rows-[1fr_auto] overflow
+    <div className="grid grid-cols-2 grid-rows-[1fr_auto] overflow-hidden gap-5">
+      <ConversationPanel
+        botId="chatgpt"
+        messages={chatgptChat.messages}
+        onUserSendMessage={onUserSendMessage}
+        generating={chatgptChat.generating}
+        stopGenerating={chatgptChat.stopGenerating}
+        mode="compact"
+        resetConversation={chatgptChat.resetConversation}
+      />
+      <ConversationPanel
+        botId="bing"
+        messages={bingChat.messages}
+        onUserSendMessage={onUserSendMessage}
+        generating={bingChat.generating}
+        stopGenerating={bingChat.stopGenerating}
+        mode="compact"
+        resetConversation={bingChat.resetConversation}
+      />
+      <div classN
