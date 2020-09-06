@@ -19,3 +19,8 @@ const SingleBotChatPanel: FC<Props> = ({ botId }) => {
         stopGenerating={chat.stopGenerating}
         resetConversation={chat.resetConversation}
       />
+    </div>
+  )
+}
+
+export default SingleBotChatPanel
