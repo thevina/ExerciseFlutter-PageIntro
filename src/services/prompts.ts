@@ -23,4 +23,8 @@ export async function removeLocalPrompt(id: string) {
 }
 
 export async function loadRemotePrompts() {
-  return ofetch<Prompt[]>('htt
+  return ofetch<Prompt[]>('https://chathub.gg/api/community-prompts').catch((err) => {
+    console.error('Failed to load remote prompts', err)
+    return []
+  })
+}
