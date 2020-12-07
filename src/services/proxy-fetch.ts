@@ -47,3 +47,17 @@ export async function proxyFetch(tabId: number, url: string, options?: RequestIn
   return new Promise((resolve) => {
     const port = Browser.tabs.connect(tabId, { name: uuid() })
     port.onDisconnect.addListener(() => {
+      throw new DOMException('proxy fetch aborted', 'AbortError')
+    })
+    options?.signal?.addEventListener('abort', () => port.disconnect())
+    const body = new ReadableStream({
+      start(controller) {
+        port.onMessage.addListener(function onMessage(
+          message: ProxyFetchResponseMetadataMessage | ProxyFetchResponseBodyChunkMessage,
+        ) {
+          if (message.type === 'PROXY_RESPONSE_METADATA') {
+            const response = new Response(body, message.metadata)
+            resolve(response)
+          } else if (message.type === 'PROXY_RESPONSE_BODY_CHUNK') {
+            if (message.done) {
+        
