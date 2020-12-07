@@ -30,3 +30,20 @@ export function setupProxyExecutor() {
           headers: Object.fromEntries(resp.headers.entries()),
         },
       } as ProxyFetchResponseMetadataMessage)
+      for await (const chunk of streamAsyncIterable(resp.body!)) {
+        port.postMessage({
+          type: 'PROXY_RESPONSE_BODY_CHUNK',
+          value: uint8Array2String(chunk),
+          done: false,
+        } as ProxyFetchResponseBodyChunkMessage)
+      }
+      port.postMessage({ type: 'PROXY_RESPONSE_BODY_CHUNK', done: true } as ProxyFetchResponseBodyChunkMessage)
+    })
+  })
+}
+
+export async function proxyFetch(tabId: number, url: string, options?: RequestInitSubset): Promise<Response> {
+  console.debug('proxyFetch', tabId, url, options)
+  return new Promise((resolve) => {
+    const port = Browser.tabs.connect(tabId, { name: uuid() })
+    port.onDisconnect.addListener(() => {
