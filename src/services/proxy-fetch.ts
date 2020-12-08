@@ -60,4 +60,20 @@ export async function proxyFetch(tabId: number, url: string, options?: RequestIn
             resolve(response)
           } else if (message.type === 'PROXY_RESPONSE_BODY_CHUNK') {
             if (message.done) {
-        
+              controller.close()
+              port.onMessage.removeListener(onMessage)
+              port.disconnect()
+            } else {
+              const chunk = string2Uint8Array(message.value)
+              controller.enqueue(chunk)
+            }
+          }
+        })
+        port.postMessage({ url, options } as ProxyFetchRequestMessage)
+      },
+      cancel(_reason: string) {
+        port.disconnect()
+      },
+    })
+  })
+}
