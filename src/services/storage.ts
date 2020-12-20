@@ -5,4 +5,11 @@ export async function getTokenUsage() {
   return tokenUsage || 0
 }
 
-export 
+export async function incrTokenUsage(v = 1) {
+  const tokenUsage = await getTokenUsage()
+  await Browser.storage.sync.set({ tokenUsage: tokenUsage + v })
+}
+
+export async function resetTokenUsage() {
+  await Browser.storage.sync.remove('tokenUsage')
+}
