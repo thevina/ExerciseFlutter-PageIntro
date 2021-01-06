@@ -33,4 +33,7 @@ export async function updateUserConfig(updates: Partial<UserConfig>) {
   await Browser.storage.sync.set(updates)
   for (const [key, value] of Object.entries(updates)) {
     if (value === undefined) {
-      await Browser.st
+      await Browser.storage.sync.remove(key)
+    }
+  }
+}
