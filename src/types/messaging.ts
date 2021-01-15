@@ -13,4 +13,14 @@ export interface ProxyFetchRequestMessage {
 export interface ProxyFetchResponseMetadata {
   status?: number
   statusText?: string
-  headers?: Record<string, stri
+  headers?: Record<string, string>
+}
+
+export interface ProxyFetchResponseMetadataMessage {
+  type: 'PROXY_RESPONSE_METADATA'
+  metadata: ProxyFetchResponseMetadata
+}
+
+export type ProxyFetchResponseBodyChunkMessage = {
+  type: 'PROXY_RESPONSE_BODY_CHUNK'
+} & ({ done: true } | { done: false; value: string })
