@@ -237,4 +237,24 @@
   integrity sha512-F2SNF8aKGXF1mqg0EQisgdK1fgUud9BR52rpf9iPEKGH+41//t+qj9aRls3+iUOx3niNYujIXTMyrdyPpSzs9g==
   dependencies:
     "@rollup/pluginutils" "^4.1.2"
-    "@webcomponents/custom-elements" "^1
+    "@webcomponents/custom-elements" "^1.5.0"
+    acorn-walk "^8.2.0"
+    cheerio "^1.0.0-rc.10"
+    connect-injector "^0.4.4"
+    debug "^4.3.3"
+    es-module-lexer "^0.10.0"
+    fast-glob "^3.2.11"
+    fs-extra "^10.0.1"
+    jsesc "^3.0.2"
+    magic-string "^0.26.0"
+    picocolors "^1.0.0"
+    react-refresh "^0.13.0"
+    rollup "2.78.1"
+    rxjs "7.5.7"
+
+"@csstools/selector-specificity@^2.0.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.1.1.tgz#c9c61d9fe5ca5ac664e1153bb0aa0eba1c6d6308"
+  integrity sha512-jwx+WCqszn53YHOfvFMJJRd/B2GqkCBt+1MJSG6o5/s8+ytHMvDZXsJgUEWLk12UnLd7HYKac4BYU5i/Ron1Cw==
+
+"@emotion/babel-plugin@^11.
