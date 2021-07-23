@@ -780,4 +780,21 @@
 
 "@parcel/cache@2.8.3":
   version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@parcel/cache/-/cache-2.8.3.tgz#169e130cf59913c0ed9fadce1a450e68f710e16
+  resolved "https://registry.yarnpkg.com/@parcel/cache/-/cache-2.8.3.tgz#169e130cf59913c0ed9fadce1a450e68f710e16f"
+  integrity sha512-k7xv5vSQrJLdXuglo+Hv3yF4BCSs1tQ/8Vbd6CHTkOhf7LcGg6CPtLw053R/KdMpd/4GPn0QrAsOLdATm1ELtQ==
+  dependencies:
+    "@parcel/fs" "2.8.3"
+    "@parcel/logger" "2.8.3"
+    "@parcel/utils" "2.8.3"
+    lmdb "2.5.2"
+
+"@parcel/codeframe@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/codeframe/-/codeframe-2.8.3.tgz#84fb529ef70def7f5bc64f6c59b18d24826f5fcc"
+  integrity sha512-FE7sY53D6n/+2Pgg6M9iuEC6F5fvmyBkRE4d9VdnOoxhTXtkEqpqYgX7RJ12FAQwNlxKq4suBJQMgQHMF2Kjeg==
+  dependencies:
+    chalk "^4.1.0"
+
+"@parcel/compressor-raw@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/compressor-raw
