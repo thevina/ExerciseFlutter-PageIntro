@@ -808,4 +808,22 @@
   integrity sha512-o/A/mbrO6X/BfGS65Sib8d6SSG45NYrNooNBkH/o7zbOBSRQxwyTlysleK1/3Wa35YpvFyLOwgfakqCtbGy4fw==
   dependencies:
     "@parcel/bundler-default" "2.8.3"
-    "@parcel/compressor-
+    "@parcel/compressor-raw" "2.8.3"
+    "@parcel/namer-default" "2.8.3"
+    "@parcel/optimizer-css" "2.8.3"
+    "@parcel/optimizer-htmlnano" "2.8.3"
+    "@parcel/optimizer-image" "2.8.3"
+    "@parcel/optimizer-svgo" "2.8.3"
+    "@parcel/optimizer-terser" "2.8.3"
+    "@parcel/packager-css" "2.8.3"
+    "@parcel/packager-html" "2.8.3"
+    "@parcel/packager-js" "2.8.3"
+    "@parcel/packager-raw" "2.8.3"
+    "@parcel/packager-svg" "2.8.3"
+    "@parcel/reporter-dev-server" "2.8.3"
+    "@parcel/resolver-default" "2.8.3"
+    "@parcel/runtime-browser-hmr" "2.8.3"
+    "@parcel/runtime-js" "2.8.3"
+    "@parcel/runtime-react-refresh" "2.8.3"
+    "@parcel/runtime-service-worker" "2.8.3"
+   
