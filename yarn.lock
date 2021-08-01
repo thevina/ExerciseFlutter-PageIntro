@@ -840,4 +840,19 @@
 
 "@parcel/config-webextension@^2.8.3":
   version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@parcel/config-webextension/-/config-webextension-2.8.3.tgz#24d1e0c391ef675dbd4ae
+  resolved "https://registry.yarnpkg.com/@parcel/config-webextension/-/config-webextension-2.8.3.tgz#24d1e0c391ef675dbd4aecf6199b826b6d034eb5"
+  integrity sha512-TWbnfMzVvJvSqLD0+5oA4lPa3yzDLtkXzZcoPp91HkvAH6G7iySOFUq0uAEecpzxQBpOf+90emQNgSvyBOkHgA==
+  dependencies:
+    "@parcel/config-default" "2.8.3"
+    "@parcel/packager-webextension" "2.8.3"
+    "@parcel/runtime-webextension" "2.8.3"
+    "@parcel/transformer-raw" "2.8.3"
+    "@parcel/transformer-webextension" "2.8.3"
+
+"@parcel/core@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/core/-/core-2.8.3.tgz#22a69f36095d53736ab10bf42697d9aa5f4e382b"
+  integrity sha512-Euf/un4ZAiClnlUXqPB9phQlKbveU+2CotZv7m7i+qkgvFn5nAGnrV4h1OzQU42j9dpgOxWi7AttUDMrvkbhCQ==
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.0"
+  
