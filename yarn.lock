@@ -935,4 +935,20 @@
 
 "@parcel/markdown-ansi@2.8.3":
   version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@parcel/markdown-ansi/-/markdown-ansi-2.8.3.tgz#1337d421bb1133ad178f3
+  resolved "https://registry.yarnpkg.com/@parcel/markdown-ansi/-/markdown-ansi-2.8.3.tgz#1337d421bb1133ad178f386a8e1b746631bba4a1"
+  integrity sha512-4v+pjyoh9f5zuU/gJlNvNFGEAb6J90sOBwpKJYJhdWXLZMNFCVzSigxrYO+vCsi8G4rl6/B2c0LcwIMjGPHmFQ==
+  dependencies:
+    chalk "^4.1.0"
+
+"@parcel/namer-default@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/namer-default/-/namer-default-2.8.3.tgz#5304bee74beb4b9c1880781bdbe35be0656372f4"
+  integrity sha512-tJ7JehZviS5QwnxbARd8Uh63rkikZdZs1QOyivUhEvhN+DddSAVEdQLHGPzkl3YRk0tjFhbqo+Jci7TpezuAMw==
+  dependencies:
+    "@parcel/diagnostic" "2.8.3"
+    "@parcel/plugin" "2.8.3"
+    nullthrows "^1.1.1"
+
+"@parcel/node-resolver-core@2.8.3":
+  version "2.8.3"
+  resolved "htt
