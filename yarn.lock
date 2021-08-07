@@ -951,4 +951,17 @@
 
 "@parcel/node-resolver-core@2.8.3":
   version "2.8.3"
-  resolved "htt
+  resolved "https://registry.yarnpkg.com/@parcel/node-resolver-core/-/node-resolver-core-2.8.3.tgz#581df074a27646400b3fed9da95297b616a7db8f"
+  integrity sha512-12YryWcA5Iw2WNoEVr/t2HDjYR1iEzbjEcxfh1vaVDdZ020PiGw67g5hyIE/tsnG7SRJ0xdRx1fQ2hDgED+0Ww==
+  dependencies:
+    "@parcel/diagnostic" "2.8.3"
+    "@parcel/utils" "2.8.3"
+    nullthrows "^1.1.1"
+    semver "^5.7.1"
+
+"@parcel/optimizer-css@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/optimizer-css/-/optimizer-css-2.8.3.tgz#420a333f4b78f7ff15e69217dfed34421b1143ee"
+  integrity sha512-JotGAWo8JhuXsQDK0UkzeQB0UR5hDAKvAviXrjqB4KM9wZNLhLleeEAW4Hk8R9smCeQFP6Xg/N/NkLDpqMwT3g==
+  dependencies:
+    "@pa
