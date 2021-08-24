@@ -1108,4 +1108,19 @@
 
 "@parcel/reporter-cli@2.8.3":
   version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@parcel/reporter-cli/-/reporter-cli-
+  resolved "https://registry.yarnpkg.com/@parcel/reporter-cli/-/reporter-cli-2.8.3.tgz#12a4743b51b8fe6837f53c20e01bbf1f7336e8e4"
+  integrity sha512-3sJkS6tFFzgIOz3u3IpD/RsmRxvOKKiQHOTkiiqRt1l44mMDGKS7zANRnJYsQzdCsgwc9SOP30XFgJwtoVlMbw==
+  dependencies:
+    "@parcel/plugin" "2.8.3"
+    "@parcel/types" "2.8.3"
+    "@parcel/utils" "2.8.3"
+    chalk "^4.1.0"
+    term-size "^2.2.1"
+
+"@parcel/reporter-dev-server@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/reporter-dev-server/-/reporter-dev-server-2.8.3.tgz#a0daa5cc015642684cea561f4e0e7116bbffdc1c"
+  integrity sha512-Y8C8hzgzTd13IoWTj+COYXEyCkXfmVJs3//GDBsH22pbtSFMuzAZd+8J9qsCo0EWpiDow7V9f1LischvEh3FbQ==
+  dependencies:
+    "@parcel/plugin" "2.8.3"
+    "@parcel/utils" "2
