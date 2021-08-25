@@ -1123,4 +1123,17 @@
   integrity sha512-Y8C8hzgzTd13IoWTj+COYXEyCkXfmVJs3//GDBsH22pbtSFMuzAZd+8J9qsCo0EWpiDow7V9f1LischvEh3FbQ==
   dependencies:
     "@parcel/plugin" "2.8.3"
-    "@parcel/utils" "2
+    "@parcel/utils" "2.8.3"
+
+"@parcel/resolver-default@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/resolver-default/-/resolver-default-2.8.3.tgz#5ae41e537ae4a793c1abb47f094482b9e2ac3535"
+  integrity sha512-k0B5M/PJ+3rFbNj4xZSBr6d6HVIe6DH/P3dClLcgBYSXAvElNDfXgtIimbjCyItFkW9/BfcgOVKEEIZOeySH/A==
+  dependencies:
+    "@parcel/node-resolver-core" "2.8.3"
+    "@parcel/plugin" "2.8.3"
+
+"@parcel/runtime-browser-hmr@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/runtime-browser-hmr/-/runtime-browser-hmr-2.8.3.tgz#1fa74e1fbd1030b0a920c58afa3a9eb7dc4bcd1e"
+  integrity sha512-2O1PYi2j/Q0lTyGNV3JdBYwg4rKo6TEVFlYGdd5wCYU9ZIN9RRuoCnWWH2qCPj3pjIVtBep
