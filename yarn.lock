@@ -1263,4 +1263,15 @@
 
 "@parcel/transformer-json@2.8.3":
   version "2.8.3"
-  resolved "https://registry.yarnpkg
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-json/-/transformer-json-2.8.3.tgz#25deb3a5138cc70a83269fc5d39d564609354d36"
+  integrity sha512-B7LmVq5Q7bZO4ERb6NHtRuUKWGysEeaj9H4zelnyBv+wLgpo4f5FCxSE1/rTNmP9u1qHvQ3scGdK6EdSSokGPg==
+  dependencies:
+    "@parcel/plugin" "2.8.3"
+    json5 "^2.2.0"
+
+"@parcel/transformer-postcss@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-postcss/-/transformer-postcss-2.8.3.tgz#df4fdc1c90893823445f2a8eb8e2bdd0349ccc58"
+  integrity sha512-e8luB/poIlz6jBsD1Izms+6ElbyzuoFVa4lFVLZnTAChI3UxPdt9p/uTsIO46HyBps/Bk8ocvt3J4YF84jzmvg==
+  dependencies:
+    "@parcel/diagno
