@@ -1651,4 +1651,16 @@
     "@tanstack/router" "0.0.1-beta.83"
 
 "@tanstack/react-store@0.0.1-beta.81":
-  versio
+  version "0.0.1-beta.81"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-store/-/react-store-0.0.1-beta.81.tgz#bb36a280e2c133bfad691ad4373b092da1425d09"
+  integrity sha512-wN4YVYzWQOvNKBnS+3+JINkR8qx93tX52iqzJfzzt3b7e3oqlkl3X3SnpGH1/hRwMNklMxvT7dIg//qfWGzUhA==
+  dependencies:
+    "@tanstack/store" "0.0.1-beta.81"
+    use-sync-external-store "^1.2.0"
+
+"@tanstack/router@0.0.1-beta.83":
+  version "0.0.1-beta.83"
+  resolved "https://registry.yarnpkg.com/@tanstack/router/-/router-0.0.1-beta.83.tgz#bdfe5fcdf9a641ba013d91ffc655779495f4bec9"
+  integrity sha512-cwkfyvgg7g60wbKZBRl1sbut+eYyE6bPc/Efz2ozFD//oV6qBUftoRm4PbN5cdPgrHjjLOFuOKW43EEUXM/exQ==
+  dependencies:
+    "@babel/run
