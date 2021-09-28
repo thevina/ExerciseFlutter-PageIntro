@@ -1637,4 +1637,18 @@
 "@swc/helpers@^0.4.12":
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"
-  integrity sha512-4C7nX/dv
+  integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
+  dependencies:
+    tslib "^2.4.0"
+
+"@tanstack/react-router@^0.0.1-beta.83":
+  version "0.0.1-beta.83"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-0.0.1-beta.83.tgz#280fdcc77e755743d7709d1c823e044a3a7c4bc4"
+  integrity sha512-FcezDPKxXu7uP8tjTQpKBXkweiql053O7D3hRBg1kWuU3LyouHFGFALLr2xvWkue4WWSpa1mBzrINldYygDKLw==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    "@tanstack/react-store" "0.0.1-beta.81"
+    "@tanstack/router" "0.0.1-beta.83"
+
+"@tanstack/react-store@0.0.1-beta.81":
+  versio
