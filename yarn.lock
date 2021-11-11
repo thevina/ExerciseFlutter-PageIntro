@@ -2264,4 +2264,18 @@ concat-map@0.0.1:
 connect-injector@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/connect-injector/-/connect-injector-0.4.4.tgz#a81959c31ecf5caa0f3dcc325c28ed90b830aa90"
- 
+  integrity sha512-hdBG8nXop42y2gWCqOV8y1O3uVk4cIU+SoxLCPyCUKRImyPiScoNiSulpHjoktRU1BdI0UzoUdxUa87thrcmHw==
+  dependencies:
+    debug "^2.0.0"
+    q "^1.0.1"
+    stream-buffers "^0.2.3"
+    uberproto "^1.1.0"
+
+content-security-policy-parser@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/content-security-policy-parser/-/content-security-policy-parser-0.3.0.tgz#a14d4ed54c8d098621ba46cabcd20a78be0c691e"
+  integrity sha512-ub90B4t9EfDPv3DCH7vEwGe4tVMkSm4Ow1HsmvmEQwinDfpTEDmkuJVa5WpzHDTt2bUirNRZuzL6S0msASlJhg==
+
+convert-source-map@^1.5.0, convert-source-map@^1.7.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.
