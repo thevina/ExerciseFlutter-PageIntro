@@ -3540,4 +3540,16 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lightn
+lightningcss-darwin-arm64@1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.19.0.tgz#56ab071e932f845dbb7667f44f5b78441175a343"
+  integrity sha512-wIJmFtYX0rXHsXHSr4+sC5clwblEMji7HHQ4Ub1/CznVRxtCFha6JIt5JZaNf8vQrfdZnBxLLC6R8pC818jXqg==
+
+lightningcss-darwin-x64@1.19.0:
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.19.0.tgz#c867308b88859ba61a2c46c82b1ca52ff73a1bd0"
+  integrity sha512-Lif1wD6P4poaw9c/4Uh2z+gmrWhw/HtXFoeZ3bEsv6Ia4tt8rOJBdkfVaUJ6VXmpKHALve+iTyP2+50xY1wKPw==
+
+lightningcss-linux-arm-gnueabihf@1.19.0:
+  version "1.19.0"
+  resolved "htt
