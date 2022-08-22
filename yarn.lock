@@ -4475,4 +4475,18 @@ pify@^2.3.0:
 plausible-tracker@^0.3.8:
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/plausible-tracker/-/plausible-tracker-0.3.8.tgz#9b8b322cc41e0e1d6473869ef234deea365a5a40"
-  integrity 
+  integrity sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==
+
+postcss-import@^14.1.0:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-import/-/postcss-import-14.1.0.tgz#a7333ffe32f0b8795303ee9e40215dac922781f0"
+  integrity sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==
+  dependencies:
+    postcss-value-parser "^4.0.0"
+    read-cache "^1.0.0"
+    resolve "^1.1.7"
+
+postcss-js@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-4.0.1.tgz#61598186f3703bab052f1c4f7d805f3991bee9d2"
+  integrity sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV
